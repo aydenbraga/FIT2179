@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "description": "Change in Religious Affiliation in Australia (1996 vs 2021)",
+
+  "data": {
+    "values": [
+      {"Religion": "Christianity", "Year": "1996", "Value": 70.9},
+      {"Religion": "Christianity", "Year": "2021", "Value": 43.9},
+
+      {"Religion": "Other Religions", "Year": "1996", "Value": 3.5},
+      {"Religion": "Other Religions", "Year": "2021", "Value": 10.0},
+
+      {"Religion": "No Religion", "Year": "1996", "Value": 16.6},
+      {"Religion": "No Religion", "Year": "2021", "Value": 38.9}
+    ]
+  },
+
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Percentage (%)"
+    },
+
+    "color": {
+      "field": "Religion",
+      "type": "nominal",
+      "title": "Religion"
+    },
+
+    "detail": {
+      "field": "Religion"
+    },
+
+    "tooltip": [
+      {"field": "Religion"},
+      {"field": "Year"},
+      {"field": "Value"}
+    ]
+  }
+}

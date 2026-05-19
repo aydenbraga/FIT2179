@@ -1,0 +1,33 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "description": "Religious affiliation of migrants in Australia",
+
+  "data": {"url": "https://raw.githubusercontent.com/aydenbraga/FIT2179/refs/heads/main/migration_nonspecific.csv"},
+  
+
+  "mark": "bar",
+
+  "encoding": {
+    "x": {
+      "field": "Proportion of migrants",
+      "type": "quantitative",
+      "title": "Proportion (%)"
+    },
+    "y": {
+      "field": "Religion",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "Religious Affiliation"
+    },
+    "color": {
+      "field": "Religion",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Religion"},
+      {"field": "Proportion"}
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Religious Affiliation in Australia (1971–2021)",
+  "data": {"url": "https://raw.githubusercontent.com/aydenbraga/FIT2179/refs/heads/main/religionot.csv"},
+  "transform": [
+    { "calculate": "toNumber(datum.Year)",
+    "as": "YearNum"
+
+    },
+    {
+      "fold": [
+        "Christianity",
+        "OtherReligions",
+        "NoReligion"
+      ],
+      "as": ["Religion", "Percentage"]
+    }
+  ],
+
+  "mark":"area",
+  "encoding": {
+    "x": {"field": "YearNum", "type": "ordinal", "title": "Year"},
+    "y": {"field": "Percentage", "type": "quantitative", "title": "Percentage of Population"},
+
+    "color": {
+      "field": "Religion",
+      "type": "nominal",
+      "title": "Religious Affiliation"
+    },
+
+    "tooltip": [
+      {"field": "Year"},
+      {"field": "Religion"},
+      {"field": "Percentage"}
+    ]
+  }
+}
+

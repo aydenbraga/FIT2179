@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "description": "Religious Affiliation by Generation in Australia (2021)",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/aydenbraga/FIT2179/refs/heads/main/religiongen.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+
+  "transform": [
+    {
+      "fold": [
+        "Christianity",
+        "OtherReligions",
+        "NoReligion",
+        "NotStated"
+      ],
+      "as": ["Religion", "Percentage"]
+    }
+  ],
+
+  "mark": "bar",
+
+  "encoding": {
+    "y": {
+      "field": "Generation",
+      "type": "nominal",
+      "sort": [
+        "Gen Alpha",
+        "Gen Z",
+        "Millenials",
+        "Gen X",
+        "Baby Boomers",
+        "Interwar"
+      ],
+      "title": "Generation"
+    },
+
+    "x": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "Percentage (%)"
+    },
+
+    "color": {
+      "field": "Religion",
+      "type": "nominal",
+      "title": "Religious Affiliation"
+    },
+
+    "tooltip": [
+      {"field": "Generation"},
+      {"field": "Religion"},
+      {"field": "Percentage"}
+    ]
+  }
+}

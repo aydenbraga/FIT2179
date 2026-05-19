@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "description": "Growth of major non-Christian religions in Australia",
+
+  "data": {
+    "values": [
+      {"Year": 1996, "Religion": "Islam", "Value": 200900},
+      {"Year": 2001, "Religion": "Islam", "Value": 281600},
+      {"Year": 2006, "Religion": "Islam", "Value": 340400},
+      {"Year": 2011, "Religion": "Islam", "Value": 476300},
+      {"Year": 2016, "Religion": "Islam", "Value": 604200},
+      {"Year": 2021, "Religion": "Islam", "Value": 813400},
+
+      {"Year": 1996, "Religion": "Hinduism", "Value": 67300},
+      {"Year": 2001, "Religion": "Hinduism", "Value": 95500},
+      {"Year": 2006, "Religion": "Hinduism", "Value": 148100},
+      {"Year": 2011, "Religion": "Hinduism", "Value": 275500},
+      {"Year": 2016, "Religion": "Hinduism", "Value": 440300},
+      {"Year": 2021, "Religion": "Hinduism", "Value": 684000},
+
+      {"Year": 1996, "Religion": "Buddhism", "Value": 199800},
+      {"Year": 2001, "Religion": "Buddhism", "Value": 357800},
+      {"Year": 2006, "Religion": "Buddhism", "Value": 418800},
+      {"Year": 2011, "Religion": "Buddhism", "Value": 529000},
+      {"Year": 2016, "Religion": "Buddhism", "Value": 563700},
+      {"Year": 2021, "Religion": "Buddhism", "Value": 615800},
+
+      {"Year": 1996, "Religion": "Sikhism", "Value": 12000},
+      {"Year": 2001, "Religion": "Sikhism", "Value": 17400},
+      {"Year": 2006, "Religion": "Sikhism", "Value": 26400},
+      {"Year": 2011, "Religion": "Sikhism", "Value": 72300},
+      {"Year": 2016, "Religion": "Sikhism", "Value": 125900},
+      {"Year": 2021, "Religion": "Sikhism", "Value": 210400}
+    ]
+  },
+
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Population"
+    },
+    "color": {
+      "field": "Religion",
+      "type": "nominal"
+    }
+  }
+}

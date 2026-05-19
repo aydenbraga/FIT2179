@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "description": "Top countries of birth for migrants in Australia",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/aydenbraga/FIT2179/refs/heads/main/countrybirth.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(replace(datum['Census population count'], ',', ''))",
+      "as": "Count"
+    }
+  ],
+
+  "mark": "bar",
+
+  "encoding": {
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "Country"
+    },
+
+    "x": {
+      "field": "Count",
+      "type": "quantitative",
+      "title": "Census population count"
+    },
+
+    "tooltip": [
+      {"field": "Country"},
+      {"field": "Count"}
+    ]
+  }
+}
