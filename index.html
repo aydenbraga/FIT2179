@@ -1,175 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>For The Few</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Faith Across Australia</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <!-- PureCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      line-height: 1.6;
-    }
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 60px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(10,10,10,0.85);
-      backdrop-filter: blur(10px);
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
+    <!-- Headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    nav a {
-      color: #ccc;
-      text-decoration: none;
-      margin-left: 30px;
-      transition: 0.3s;
-    }
+    <!-- Body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
-    nav a:hover {
-      color: #fff;
-    }
-
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 60px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), #0a0a0a),
-                  url('https://images.unsplash.com/photo-1520975922284-9c1c6c3c3b5b') center/cover;
-    }
-
-    .hero h2 {
-      font-size: 60px;
-      font-family: 'Playfair Display', serif;
-      max-width: 700px;
-    }
-
-    .hero p {
-      margin-top: 20px;
-      color: #aaa;
-      max-width: 500px;
-    }
-
-    .hero button {
-      margin-top: 30px;
-      padding: 12px 28px;
-      border: 1px solid #fff;
-      background: transparent;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .hero button:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    .section {
-      padding: 100px 60px;
-    }
-
-    .section h3 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #111;
-      padding: 30px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      background: #181818;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #777;
-      border-top: 1px solid #222;
-    }
-  </style>
+    <!-- Vega -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
 <body>
 
-<header>
-  <h1>FOR THE FEW</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Collection</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+    <!-- HERO SECTION -->
+    <section class="hero">
 
-<section class="hero">
-  <h2>Created for the Chosen. Worn by the Few.</h2>
-  <p>A refined expression of faith, discipline, and identity. This is more than clothing — it’s a statement.</p>
-  <button>Explore Collection</button>
-</section>
+        <div class="hero-text">
 
-<section class="section">
-  <h3>Our Philosophy</h3>
-  <p>
-    We design with intention. Every piece reflects purpose, strength, and belief. 
-    This is not fast fashion — it’s a movement grounded in faith and excellence.
-  </p>
+            <h1>Faith Across Australia</h1>
 
-  <div class="grid">
-    <div class="card">
-      <h4>Faith</h4>
-      <p>Rooted in something greater. Subtle but powerful messaging.</p>
-    </div>
-    <div class="card">
-      <h4>Discipline</h4>
-      <p>Built for those who train, grow, and stay consistent.</p>
-    </div>
-    <div class="card">
-      <h4>Identity</h4>
-      <p>Stand apart. Be recognized without speaking.</p>
-    </div>
-  </div>
-</section>
+            <h2>How Religion is Changing</h2>
 
-<footer>
-  © 2026 For The Few — All Rights Reserved
-</footer>
+            <p class="hero-description">
+                Australia’s religious identity has changed dramatically over the past
+                30 years through declining Christianity, increasing secularism,
+                and migration-driven diversity.
+            </p>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <h3>30+</h3>
+                    <p>Years of Census Data</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>3</h3>
+                    <p>Major Religious Trends</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>8</h3>
+                    <p>States & Territories</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>200+</h3>
+                    <p>Cultural Backgrounds</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 1 -->
+    <section class="content-section">
+
+        <div class="section-heading">
+            <h2>1. Australia’s Religious Shift</h2>
+            <p>
+                A major transformation has occurred across Australia over the last three decades.
+            </p>
+        </div>
+
+        <div class="chart-grid-2">
+
+            <div class="chart-card">
+                <h3>Religious affiliation over time</h3>
+                <div id="religionchangeotLC"></div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Religious composition over time</h3>
+                <div id="religioncompositionSAC"></div>
+            </div>
+
+        </div>
+
+        <div class="chart-grid-2">
+
+            <div class="chart-card">
+                <h3>Christianity decline (1996–2021)</h3>
+                <div id="religionchangeot96to21SC"></div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Main religions in Australia</h3>
+                <div id="mainreligions"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="content-section alt-section">
+
+        <div class="section-heading">
+            <h2>2. Immigration & Diversity</h2>
+            <p>
+                Migration has played a major role in shaping Australia’s modern religious identity.
+            </p>
+        </div>
+
+        <div class="chart-grid-2">
+
+            <div class="chart-card">
+                <h3>Top migrant groups</h3>
+                <div id="countryofbirth"></div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Religion by migrant origin</h3>
+                <div id="religionmigrantSB"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="content-section">
+
+        <div class="section-heading">
+            <h2>3. Generational Differences</h2>
+            <p>
+                Younger Australians are significantly less religious than older generations.
+            </p>
+        </div>
+
+        <div class="chart-full">
+
+            <div class="chart-card">
+                <h3>Religion by generation</h3>
+                <div id="religionbygenSBC"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+                <h4>About</h4>
+                <p>
+                    This visualisation explores how religion in Australia has changed over time
+                    using Australian Bureau of Statistics Census data.
+                </p>
+            </div>
+
+            <div>
+                <h4>Data Sources</h4>
+                <p>
+                    Australian Bureau of Statistics (ABS)<br>
+                    OpenStreetMap<br>
+                    Australian Census 1996–2021
+                </p>
+            </div>
+
+            <div>
+                <h4>Author</h4>
+                <p>
+                    Ayden Braganza<br>
+                    FIT2179 Data Visualisation 2<br>
+                    Monash University — 2026
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- VEGA EMBEDS -->
+
+<script type="text/javascript">
+
+    vegaEmbed('#religionchangeotLC', 'religionchangeotLC.json');
+
+    vegaEmbed('#religioncompositionSAC', 'religioncompositionSAC.json');
+
+    vegaEmbed('#religionchangeot96to21SC', 'religionchangeot96to21SC.json');
+
+    vegaEmbed('#mainreligions', 'mainreligions.json');
+
+    vegaEmbed('#countryofbirth', 'countryofbirth.json');
+
+    vegaEmbed('#religionmigrantSB', 'religionmigrantSB.json');
+
+    vegaEmbed('#religionbygenSBC', 'religionbygenSBC.json');
+
+</script>
 
 </body>
+
 </html>

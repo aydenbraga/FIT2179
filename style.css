@@ -1,0 +1,303 @@
+/* =========================
+   ROOT COLOURS
+========================= */
+
+:root {
+
+    --background: #f5f1ea;
+    --section: #efe7dc;
+    --card: #fbf8f3;
+
+    --text: #2c2a28;
+    --muted: #6b655e;
+
+    --accent: #b86b3d;
+    --accent-light: #d7a17e;
+
+    --border: #ddd3c5;
+
+}
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: var(--background);
+    color: var(--text);
+
+    font-family: 'Inter', sans-serif;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3,
+h4 {
+
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+
+    font-size: 5rem;
+    line-height: 0.95;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+
+    color: var(--accent);
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.chart-card h3 {
+
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+}
+
+p {
+
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 10%;
+
+    background:
+        linear-gradient(rgba(245, 241, 234, 0.90),
+            rgba(245, 241, 234, 0.95)),
+        url('https://images.unsplash.com/photo-1506973035872-a4ec16b8d4c5?q=80&w=1600&auto=format&fit=crop');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+
+    max-width: 700px;
+}
+
+.hero-description {
+
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+.stat-card {
+
+    background: rgba(255,255,255,0.75);
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(4px);
+}
+
+.stat-card h3 {
+
+    font-size: 2.2rem;
+    color: var(--accent);
+}
+
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
+
+.content-section {
+
+    padding: 90px 10%;
+}
+
+.alt-section {
+
+    background-color: var(--section);
+}
+
+.section-heading {
+
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+
+    max-width: 700px;
+}
+
+
+/* =========================
+   CHART GRIDS
+========================= */
+
+.chart-grid-2 {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+    gap: 28px;
+
+    margin-bottom: 28px;
+}
+
+.chart-full {
+
+    display: grid;
+}
+
+
+/* =========================
+   CHART CARD
+========================= */
+
+.chart-card {
+
+    background-color: var(--card);
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.04);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #2f2925;
+
+    padding: 70px 10%;
+
+    color: white;
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 40px;
+}
+
+footer h4 {
+
+    color: white;
+    margin-bottom: 15px;
+
+    font-size: 1.5rem;
+}
+
+footer p {
+
+    color: #d7d1cb;
+}
+
+
+/* =========================
+   VEGA FIXES
+========================= */
+
+.vega-embed {
+
+    width: 100%;
+}
+
+canvas {
+
+    border-radius: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    h1 {
+
+        font-size: 3.8rem;
+    }
+
+    .hero h2 {
+
+        font-size: 2.2rem;
+    }
+
+    .chart-grid-2 {
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+
+        padding: 80px 8%;
+    }
+
+    .content-section {
+
+        padding: 70px 8%;
+    }
+}
