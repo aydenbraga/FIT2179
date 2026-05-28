@@ -1,0 +1,48 @@
+Australian Bureau of Statistics
+
+"2021 Census - cultural diversity"
+"1-digit level RELP Religious Affiliation by SEXP Sex"
+"Counting: Person Records"
+
+Filters:
+"Default summation","Person Records"
+
+"Counting","1-digit level RELP Religious Affiliation","SEXP Sex","Count",
+"Person Records","Buddhism","Male",265305
+"Person Records","Buddhism","Female",350514
+"Person Records","Buddhism","Total",615823
+"Person Records","Christianity","Male",5175151
+"Person Records","Christianity","Female",5973665
+"Person Records","Christianity","Total",11148814
+"Person Records","Hinduism","Male",361241
+"Person Records","Hinduism","Female",322758
+"Person Records","Hinduism","Total",684002
+"Person Records","Islam","Male",424000
+"Person Records","Islam","Female",389392
+"Person Records","Islam","Total",813392
+"Person Records","Judaism","Male",48239
+"Person Records","Judaism","Female",51713
+"Person Records","Judaism","Total",99956
+"Person Records","Other Religions","Male",163283
+"Person Records","Other Religions","Female",162136
+"Person Records","Other Religions","Total",325421
+"Person Records","Secular Beliefs and Other Spiritual Beliefs and No Religious Affiliation","Male",5122953
+"Person Records","Secular Beliefs and Other Spiritual Beliefs and No Religious Affiliation","Female",4764004
+"Person Records","Secular Beliefs and Other Spiritual Beliefs and No Religious Affiliation","Total",9886957
+"Person Records","Inadequately described","Male",65736
+"Person Records","Inadequately described","Female",31641
+"Person Records","Inadequately described","Total",97376
+"Person Records","Not stated","Male",919242
+"Person Records","Not stated","Female",831810
+"Person Records","Not stated","Total",1751052
+"Person Records","Total","Male",12545154
+"Person Records","Total","Female",12877635
+"Person Records","Total","Total",25422788
+
+"Data source: Census of Population and Housing, 2021, TableBuilder"
+
+"INFO","Cells in this table have been randomly adjusted to avoid the release of confidential data. No reliance should be placed on small cells."
+
+
+"Copyright Commonwealth of Australia, 2026, see abs.gov.au/copyright"
+"ABS data licensed under Creative Commons, see abs.gov.au/ccby"
